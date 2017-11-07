@@ -11,6 +11,7 @@ var connection=mysql.createPool({
 })
 
 /* GET home page. */
+//轮播图接口
 router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='l'`,function (err, rows, fields) {
@@ -18,18 +19,20 @@ router.post('/select1', function(req, res, next) {
       res.send(rows)
     })
 });
-
+//添加接口
 router.post('/add', function(req, res, next) {
     res.header('Access-Control-Allow-Origin','*')
     var T=req.body.t
     var C=req.body.c
     var I=req.body.i
     var Ty=req.body.ty
+    var I2=req.body.i2
     console.log(T,C,I)
-    connection.query(`INSERT INTO list (title,detail,img,type) VALUES('${T}','${C}','${I}','${Ty}')`,function (err, rows, fields) {
+    connection.query(`INSERT INTO list (title,detail,img,type,img2) VALUES('${T}','${C}','${I}','${Ty}','${I2}')`,function (err, rows, fields) {
         res.send('上传成功')
     })
 });
+//图片接口
 router.post('/img',function (req,res, next) {
     res.header('Access-Control-Allow-Origin','*')
     var form=new formidable()
@@ -51,8 +54,22 @@ router.post('/img',function (req,res, next) {
             }
             var newPath='public/images/'+fName
             fs.renameSync(file.path,newPath)
-            res.send('images/'+fName)
+            res.send({
+                a:'images/'+fName,
+                b:newPath
+            })
         }
     })
 })
+//删除接口
+router.post('/delete', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin','*')
+    var id=req.body.ID
+    var path=req.body.path
+    connection.query(`DELETE FROM list WHERE id=${id}`,function (err, rows, fields) {
+        fs.unlink(`${path}`,function () {
+            res.send('删除成功')
+        })
+    })
+});
 module.exports = router;

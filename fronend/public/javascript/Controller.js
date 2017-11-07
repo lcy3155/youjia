@@ -13,7 +13,7 @@ $(function () {
                         '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
                         '<td>'+data[i].title+'</td>' +
                         '<td>'+data[i].detail+'</td>' +
-                        '<td><button id="'+data[i].id+'">删除</button></td>' +
+                        '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
                         '</tr>'
                     )
                 }
@@ -28,6 +28,7 @@ $(function () {
     // 图片上传框
     var Files=null
     var I=null
+    var I2=null
     $('#file').change(function () {
         Files=$(this).prop('files')
     })
@@ -44,8 +45,9 @@ $(function () {
                 contentType:false,
                 processData:false,
                 success:function (data) {
-                    I='http://localhost:3000/'+data
-                    $('#img').attr('src','http://localhost:3000/'+data)
+                    I='http://localhost:3000/'+data.a
+                    I2=data.b
+                    $('#img').attr('src','http://localhost:3000/'+data.a)
                 }
             })
         }
@@ -68,6 +70,7 @@ $(function () {
                     t:Title,
                     c:Content,
                     i:I,
+                    i2:I2,
                     ty:Type
                 },
                 success:function (data) {
@@ -75,5 +78,22 @@ $(function () {
                 }
             })
         }
+    })
+    //删除数据
+    $('#home').on('click','button',function () {
+        var ID=$(this).attr('id')
+        var Path=$(this).attr('s')
+        console.log(Path)
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+                path:Path
+            },
+            success:function (data) {
+                window.location.reload()
+            }
+        })
     })
 })
