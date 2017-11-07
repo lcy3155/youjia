@@ -21,6 +21,7 @@ $(function () {
         })
     }
     F5()
+
     // 图片上传框
     var Files=null
     var I=null
