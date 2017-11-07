@@ -11,9 +11,9 @@ var connection=mysql.createPool({
 })
 
 /* GET home page. */
-router.post('/select', function(req, res, next) {
+router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
-    connection.query('SELECT * FROM list',function (err, rows, fields) {
+    connection.query(`SELECT * FROM list WHERE type='l'`,function (err, rows, fields) {
       console.log(rows)
       res.send(rows)
     })

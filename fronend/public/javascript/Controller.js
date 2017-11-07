@@ -2,12 +2,12 @@ $(function () {
     //刷新获取
     function  F5() {
         $.ajax({
-            url:'http://localhost:3000/select',
+            url:'http://localhost:3000/select1',
             type:'POST',
             success:function (data) {
-                $('#t').html('')
+                $('#t1').html('')
                 for(i in data){
-                    $('#t').append(
+                    $('#t1').append(
                         '<tr>' +
                         '<td>'+data[i].id+'</td>' +
                         '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
@@ -21,7 +21,10 @@ $(function () {
         })
     }
     F5()
-
+    //点击切换刷新
+    $('#a1').click(function () {
+        F5()
+    })
     // 图片上传框
     var Files=null
     var I=null
@@ -57,7 +60,7 @@ $(function () {
         var Title=$('#title').val()
         var Content=$('#content').summernote('code')
         var files
-        if(Title!==""&&Content!=='<p><br></p>'){
+        if(Title!==""&&Content!=='<p><br></p>'&&Type!==null){
             $.ajax({
                 url:'http://localhost:3000/add',
                 type:'POST',
