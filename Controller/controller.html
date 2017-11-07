@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制台</title>
+    <script src="../fronend/public/javascript/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="../fronend/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../fronend/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="../fronend/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../fronend/node_modules/summernote/dist/summernote.css">
+    <script src="../fronend/node_modules/summernote/dist/summernote.js"></script>
+    <link rel="stylesheet" href="../fronend/public/stylesheets/css.css">
+    <script src="../fronend/public/javascript/Controller.js"></script>
+</head>
+<body>
+<div class="Control">
+    <div class="title">
+        <input type="text" placeholder="标题" id="title">
+        <div class="bianji" id="content"></div>
+    </div>
+    <div class="file">
+        <input type="file" id="file"><button id="upload">上传</button>
+        <img src="" alt="" id="img">
+    </div>
+    <div class="radio">
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" class="a" attr="l"> 轮播图
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" class="a" attr="a"> 2
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" class="a" attr="s"> 3
+        </label>
+    </div>
+    <div class="btn">
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="add">
+            添加
+        </button>
+    </div>
+</div>
+<div class="main">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">轮播</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>img</th>
+                    <th>title</th>
+                    <th>detail</th>
+                    <th>delete</th>
+                </tr>
+                </thead>
+                <tbody id="t">
+                </tbody>
+            </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">2</div>
+        <div role="tabpanel" class="tab-pane" id="messages">3</div>
+        <div role="tabpanel" class="tab-pane" id="settings">4</div>
+    </div>
+
+</div>
+</body>
+</html>
