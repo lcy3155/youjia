@@ -11,7 +11,7 @@ window.onload=function(){
     }
     function  F5() {
         $.ajax({
-            url:'http://localhost:3000/select',
+            url:'http://localhost:3000/select1',
             type:'POST',
             success:function (data) {
                 $('#lunbo').append('<div class="item active">\n' +
