@@ -287,7 +287,7 @@ $(function () {
             }
         })
     })
-    //团队接口
+    //团队删除
     $('#messages').on('click','button',function () {
         var ID=$(this).attr('id')
         var Path=$(this).attr('s')
@@ -360,7 +360,9 @@ $(function () {
         $.ajax({
             url:'http://localhost:3000/select',
             type:'POST',
-            data:ID,
+            data:{
+                ID:ID
+            },
             success:function (data) {
                 console.log(data)
             }

@@ -10,7 +10,8 @@ var connection=require('./../root.js')
 router.post('/select', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     var id=req.body.ID
-    connection.query(`SELECT * FROM list WHERE id=${id}`,function (err, rows, fields) {
+    console.log(id)
+    connection.query(`SELECT * FROM list WHERE id='${id}'`,function (err, rows, fields) {
         if(err) throw err;
         res.send(rows)
     })
