@@ -26,7 +26,6 @@ $(function () {
             url:'http://localhost:3000/select2',
             type:'POST',
             success:function (data) {
-                console.log(data)
                 $('#t2').html('')
                 for(i in data){
                     $('#t2').append(
@@ -41,12 +40,36 @@ $(function () {
             }
         })
     }
+    function F7() {
+        $.ajax({
+            url:'http://localhost:3000/select3',
+            type:'POST',
+            success:function (data) {
+                $('#t3').html('')
+                for(i in data){
+                    $('#t3').append(
+                        '<tr>' +
+                        '<td>'+data[i].id+'</td>' +
+                        '<td>'+data[i].title+'</td>' +
+                        '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
+                        '<td>'+data[i].teamtext+'</td>' +
+                        '<td>'+data[i].detail+'</td>' +
+                        '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '</tr>'
+                    )
+                }
+            }
+        })
+    }
     //点击切换刷新
     $('#a1').click(function () {
         F5()
     })
     $('#a2').click(function () {
         F6()
+    })
+    $('#a3').click(function () {
+        F7()
     })
     // 图片上传框
     var Files=null
@@ -77,6 +100,7 @@ $(function () {
     })
     //全局上传
     var Type=null
+    var Teamtext=null
     $('.a').click(function () {
         Type=$(this).attr('attr')
     })
@@ -84,6 +108,9 @@ $(function () {
     $('#add').click(function () {
         var Title=$('#title').val()
         var Content=$('#content').summernote('code')
+        if($('#team').val()!==''){
+            Teamtext=$('#team').val()
+        }
         var files
         if(Title!==""&&Content!=='<p><br></p>'&&Type!==null){
             $.ajax({
@@ -94,7 +121,8 @@ $(function () {
                     c:Content,
                     i:I,
                     i2:I2,
-                    ty:Type
+                    ty:Type,
+                    team:Teamtext
                 },
                 success:function (data) {
                     window.location.reload()
@@ -129,6 +157,22 @@ $(function () {
             },
             success:function (data) {
                 F6()
+            }
+        })
+    })
+    $('#messages').on('click','button',function () {
+        var ID=$(this).attr('id')
+        var Path=$(this).attr('s')
+        console.log(Path)
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+                path:Path
+            },
+            success:function (data) {
+                F7()
             }
         })
     })

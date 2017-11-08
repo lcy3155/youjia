@@ -100,18 +100,18 @@ nav ul li a:hover{
 }
 .carousel-caption{
   position: absolute;
-  top: 200px;
+  top: 30%;
   left: 30%;
   z-index: 999999;
 }
 .carousel-caption h1{
-  font-size: 56px;
+  font-size: 70px;
   line-height: 100px;
   color: #fff;
   text-align: center;
 }
-.carousel-caption h2{
-  font-size: 20px;
+.carousel-caption h3{
+  font-size: 17px;
   line-height: 30px;
   color: #fff;
   text-align: center;
