@@ -11,8 +11,24 @@ router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='l'`,function (err, rows, fields) {
         if(err) throw err;
-      console.log(rows)
       res.send(rows)
+    })
+});
+//模板功能接口
+router.post('/select2', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='m'`,function (err, rows, fields) {
+        if(err) throw err;
+        res.send(rows)
+    })
+});
+//团队接口
+router.post('/select3', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='t'`,function (err, rows, fields) {
+        if(err) throw err;
+        console.log(rows)
+        res.send(rows)
     })
 });
 //添加接口
@@ -23,8 +39,9 @@ router.post('/add', function(req, res, next) {
     var I=req.body.i
     var Ty=req.body.ty
     var I2=req.body.i2
+    var Team=req.body.team
     console.log(T,C,I)
-    connection.query(`INSERT INTO list (title,detail,img,type,img2) VALUES('${T}','${C}','${I}','${Ty}','${I2}')`,function (err, rows, fields) {
+    connection.query(`INSERT INTO list (title,detail,img,type,img2,teamtext) VALUES('${T}','${C}','${I}','${Ty}','${I2}','${Team}')`,function (err, rows, fields) {
         res.send('上传成功')
     })
 });
@@ -63,9 +80,14 @@ router.post('/delete', function(req, res, next) {
     var id=req.body.ID
     var path=req.body.path
     connection.query(`DELETE FROM list WHERE id=${id}`,function (err, rows, fields) {
-        fs.unlink(`${path}`,function () {
-            res.send('删除成功')
-        })
+       if(path){
+           fs.unlink(`${path}`,function () {
+               res.send('删除成功')
+           })
+       }else{
+           res.send('删除成功')
+       }
+
     })
 });
 module.exports = router;
