@@ -5,10 +5,10 @@
 //    $('.item').height($(window).height())
 //})
 window.onload=function(){
-    var iTem=document.querySelectorAll('.item')
-    for(var i=0;i<iTem.length;i++){
-        iTem[i].style.height=document.documentElement.clientHeight+'px';
-    }
+    //var iTem=document.querySelectorAll('.item')
+    //for(var i=0;i<iTem.length;i++){
+    //    iTem[i].style.height=document.documentElement.clientHeight+'px';
+    //}
     function  F5() {
         $.ajax({
             url:'http://localhost:3000/select1',
