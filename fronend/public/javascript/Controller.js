@@ -356,7 +356,6 @@ $(function () {
     //自动获取
     $('#id').change(function () {
         var ID=$(this).val()
-        console.log(ID)
         $.ajax({
             url:'http://localhost:3000/select',
             type:'POST',
@@ -364,7 +363,13 @@ $(function () {
                 ID:ID
             },
             success:function (data) {
-                console.log(data)
+                if(data='[]'){
+                    alert('输入id错误，没有此条数据，请检查')
+                }else{
+                    $('#title').val(data[0].title)
+                    $('#content').summernote('code',data[0].detail)
+                    $('#img').attr('src',data[0].img)
+                }
             }
         })
     })
