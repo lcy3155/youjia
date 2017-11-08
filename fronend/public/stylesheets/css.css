@@ -132,3 +132,13 @@
     width:100px;
     height:60px;
 }
+#add{
+    margin-right: 50px;
+}
+#id{
+    height:34px;
+    margin-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px pink solid;
+}

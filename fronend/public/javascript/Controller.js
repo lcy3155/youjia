@@ -1,5 +1,6 @@
 $(function () {
     //刷新获取
+    //轮播图
     function  F5() {
         $.ajax({
             url:'http://localhost:3000/select1',
@@ -21,6 +22,7 @@ $(function () {
         })
     }
     F5()
+    //模板功能
     function F6() {
         $.ajax({
             url:'http://localhost:3000/select2',
@@ -40,6 +42,7 @@ $(function () {
             }
         })
     }
+    //团队
     function F7() {
         $.ajax({
             url:'http://localhost:3000/select3',
@@ -50,9 +53,71 @@ $(function () {
                     $('#t3').append(
                         '<tr>' +
                         '<td>'+data[i].id+'</td>' +
-                        '<td>'+data[i].title+'</td>' +
                         '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
+                        '<td>'+data[i].title+'</td>' +
                         '<td>'+data[i].teamtext+'</td>' +
+                        '<td>'+data[i].detail+'</td>' +
+                        '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '</tr>'
+                    )
+                }
+            }
+        })
+    }
+    //项目展示
+    function F8() {
+        $.ajax({
+            url:'http://localhost:3000/select4',
+            type:'POST',
+            success:function (data) {
+                $('#t4').html('')
+                for(i in data){
+                    $('#t4').append(
+                        '<tr>' +
+                        '<td>'+data[i].id+'</td>' +
+                        '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
+                        '<td>'+data[i].title+'</td>' +
+                        '<td>'+data[i].detail+'</td>' +
+                        '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '</tr>'
+                    )
+                }
+            }
+        })
+    }
+    //服务
+    function F9() {
+        $.ajax({
+            url:'http://localhost:3000/select5',
+            type:'POST',
+            success:function (data) {
+                $('#t5').html('')
+                for(i in data){
+                    $('#t5').append(
+                        '<tr>' +
+                        '<td>'+data[i].id+'</td>' +
+                        '<td>'+data[i].title+'</td>' +
+                        '<td>'+data[i].detail+'</td>' +
+                        '<td><button id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '</tr>'
+                    )
+                }
+            }
+        })
+    }
+    //评价
+    function F10() {
+        $.ajax({
+            url:'http://localhost:3000/select6',
+            type:'POST',
+            success:function (data) {
+                $('#t6').html('')
+                for(i in data){
+                    $('#t6').append(
+                        '<tr>' +
+                        '<td>'+data[i].id+'</td>' +
+                        '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
+                        '<td>'+data[i].title+'</td>' +
                         '<td>'+data[i].detail+'</td>' +
                         '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
                         '</tr>'
@@ -70,6 +135,15 @@ $(function () {
     })
     $('#a3').click(function () {
         F7()
+    })
+    $('#a4').click(function () {
+        F8()
+    })
+    $('#a5').click(function () {
+        F9()
+    })
+    $('#a6').click(function () {
+        F10()
     })
     // 图片上传框
     var Files=null
@@ -112,7 +186,25 @@ $(function () {
             Teamtext=$('#team').val()
         }
         var files
-        if(Title!==""&&Content!=='<p><br></p>'&&Type!==null){
+        if(Type!=='x'){
+            if(Title!==""&&Content!=='<p><br></p>'&&Type!==null){
+                $.ajax({
+                    url:'http://localhost:3000/add',
+                    type:'POST',
+                    data:{
+                        t:Title,
+                        c:Content,
+                        i:I,
+                        i2:I2,
+                        ty:Type,
+                        team:Teamtext
+                    },
+                    success:function (data) {
+                        window.location.reload()
+                    }
+                })
+            }
+        }else{
             $.ajax({
                 url:'http://localhost:3000/add',
                 type:'POST',
@@ -126,6 +218,33 @@ $(function () {
                 },
                 success:function (data) {
                     window.location.reload()
+                }
+            })
+        }
+    })
+    //更新
+    $('#update').click(function () {
+        var Id=$('#id').val()
+        var Title=$('#title').val()
+        var Content=$('#content').summernote('code')
+        if($('#team').val()!==''){
+            Teamtext=$('#team').val()
+        }
+        var files
+        if(Title!==""&&Content!=='<p><br></p>'&&Id!==''){
+            $.ajax({
+                url:'http://localhost:3000/update',
+                type:'POST',
+                data:{
+                    id:Id,
+                    t:Title,
+                    c:Content,
+                    i:I,
+                    i2:I2,
+                    team:Teamtext
+                },
+                success:function (data) {
+                    console.log('更新成功')                    // window.location.reload()
                 }
             })
         }

@@ -16,11 +16,11 @@ window.onload=function(){
         iTim[i].style.height=document.documentElement.clientHeight+'px';
     }
     function  F5() {
+        //轮播图刷新
         $.ajax({
             url:'http://localhost:3000/select1',
             type:'POST',
             success:function (data) {
-                console.log(data)
                 $('#lunbo').append('<div class="item active">\n' +
                     '<img src="'+data[0].img+'" alt="...">\n' +
                     '<div class="carousel-caption">' +
@@ -48,6 +48,17 @@ window.onload=function(){
         })
     }
     F5()
+    //模板功能刷新
+    $.ajax({
+        url:'http://localhost:3000/select2',
+        type:'POST',
+        success:function (data) {
+            for(i in data){
+                $('#moban').children('div').eq(i).append('<h4>'+data[i].title+'</h4><h5>'+data[i].detail+'</h5>')
+            }
+        }
+    })
+
 }
 
 
