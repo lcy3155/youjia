@@ -6,9 +6,8 @@ var formidable=require('formidable')
 var connection=mysql.createPool({
     host:"localhost",
     user:'root',
-    password:'123456',
+    password:'zcx1812281',
     database:'test',
-    port:3306
 })
 
 /* GET home page. */
