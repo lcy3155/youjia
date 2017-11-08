@@ -6,6 +6,15 @@ var formidable=require('formidable')
 var connection=require('./../root.js')
 
 /* GET home page. */
+//查询接口
+router.post('/select', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    var id=req.body.ID
+    connection.query(`SELECT * FROM list WHERE id=${id}`,function (err, rows, fields) {
+        if(err) throw err;
+        res.send(rows)
+    })
+});
 //轮播图接口
 router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
