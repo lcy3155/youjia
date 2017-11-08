@@ -6,8 +6,9 @@ var formidable=require('formidable')
 var connection=mysql.createPool({
     host:"localhost",
     user:'root',
-    password:'zcx1812281',
+    password:'123456',
     database:'test',
+    port:3306
 })
 
 /* GET home page. */
@@ -15,6 +16,7 @@ var connection=mysql.createPool({
 router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='l'`,function (err, rows, fields) {
+        if(err) throw err;
       console.log(rows)
       res.send(rows)
     })
