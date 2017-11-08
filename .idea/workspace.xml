@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ced0132-4d79-4d1b-81a8-caf38fa37db3" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fronend/npm-debug.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fronend/public/javascripts/index.js" afterPath="$PROJECT_DIR$/fronend/public/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fronend/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/fronend/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fronend/root.js" afterPath="$PROJECT_DIR$/fronend/root.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qian/index.html" afterPath="$PROJECT_DIR$/qian/index.html" />
     </list>
     <ignored path="有家软件公司.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,9 +51,14 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fronend/routes/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.8928572">
-                  <caret line="24" column="37" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-                  <folding />
+                <state vertical-scroll-proportion="-10.464286">
+                  <caret line="21" column="37" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+                  <folding>
+                    <marker date="1510128551236" expanded="true" signature="1044:1220" placeholder="{...}" />
+                    <marker date="1510128551236" expanded="true" signature="1183:1220" placeholder="{...}" />
+                    <marker date="1510128551236" expanded="true" signature="1727:1756" placeholder="{...}" />
+                    <marker date="1510128551236" expanded="true" signature="1727:1759" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -77,10 +77,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fronend/public/javascripts/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.94423795">
+                <state vertical-scroll-proportion="-4.214286">
                   <caret line="110" column="33" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#40#0" expanded="false" />
@@ -90,10 +90,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="controller.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="controller.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Controller/controller.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="10.588235">
+                <state vertical-scroll-proportion="-4.172932">
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
@@ -336,7 +336,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -451,7 +451,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1510128551236" expanded="true" signature="1044:1220" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1183:1220" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1727:1756" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1727:1759" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -621,23 +626,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fronend/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8928572">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
+        <state vertical-scroll-proportion="-10.464286">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <marker date="1510128551236" expanded="true" signature="1044:1220" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1183:1220" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1727:1756" placeholder="{...}" />
+            <marker date="1510128551236" expanded="true" signature="1727:1759" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fronend/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/controller.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.588235">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -666,12 +668,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fronend/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94423795">
+        <state vertical-scroll-proportion="-4.214286">
           <caret line="110" column="33" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <element signature="e#893#1398#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/controller.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.172932">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
