@@ -9,12 +9,49 @@ window.onload=function(){
     var iTox=document.querySelector('.carousel');
     var iTim=document.querySelectorAll('.item img');
     var iTob=document.querySelector('.carousel-inner');
+    var xsb=document.querySelector('.xsb');
     iTob.style.height=document.documentElement.clientHeight+'px';
     iTox.style.height=document.documentElement.clientHeight+'px';
+    xsb.style.height=document.documentElement.clientHeight+'px';
+
     for(var i=0;i<iTem.length;i++){
         iTem[i].style.height=document.documentElement.clientHeight+'px';
         iTim[i].style.height=document.documentElement.clientHeight+'px';
     }
+
+    $(function(){
+
+        var  n=0;
+        var w = 1170
+//            下一个
+        $('.td-xi').click(function(){
+            n++
+            if(n==2){
+                n=0;
+            }
+            $('.ull').animate({
+                "left":-w * n+'px'
+            },500)
+        })
+
+            //上一个
+        $('.td-sh').click(function(){
+            n--
+            if(n==-1){
+                n=1;
+            }
+            $('.ull').animate({
+                "left":-w * n+'px'
+            },500)
+
+        })
+
+
+
+    })
+
+
+    //----------------
     function  F5() {
         $.ajax({
             url:'http://localhost:3000/select1',
