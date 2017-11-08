@@ -166,6 +166,7 @@ $(function () {
                 processData:false,
                 success:function (data) {
                     I='http://localhost:3000/'+data.a
+                    alert(I)
                     I2=data.b
                     $('#img').attr('src','http://localhost:3000/'+data.a)
                 }
@@ -177,6 +178,7 @@ $(function () {
     var Teamtext=null
     $('.a').click(function () {
         Type=$(this).attr('attr')
+        console.log(Type)
     })
     $('.bianji').summernote()
     $('#add').click(function () {
