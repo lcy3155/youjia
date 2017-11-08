@@ -10,9 +10,11 @@ window.onload=function(){
     var iTim=document.querySelectorAll('.item img');
     var iTob=document.querySelector('.carousel-inner');
     var xsb=document.querySelector('.xsb');
+    var cx=document.querySelector('.cx');
     iTob.style.height=document.documentElement.clientHeight+'px';
     iTox.style.height=document.documentElement.clientHeight+'px';
     xsb.style.height=document.documentElement.clientHeight+'px';
+    cx.style.height=document.documentElement.clientHeight+'px';
 
     for(var i=0;i<iTem.length;i++){
         iTem[i].style.height=document.documentElement.clientHeight+'px';
@@ -96,7 +98,21 @@ window.onload=function(){
         }
     })
 
+//我们的团队
+    $.ajax({
+        url:'http://localhost:3000/select3',
+        type:'POST',
+        data:{},
+        success:function (data) {
+            for(i in data){
+                $('.td_tu')[i].append('<img src="'+data[i].img+'">'+'<h4>'+data[i].name+'</h4><h5>'+data[i].teamtext+'</h5><p>'+e[i].	detail+'</p>')
+            }
+        }
+    })
+
 }
+
+
 
 
 

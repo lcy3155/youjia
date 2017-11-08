@@ -368,3 +368,15 @@ nav ul li a:hover{
   float: left;
   width: 1170px;
 }
+
+
+/*产品销售*/
+.cx{
+  width: 100%;
+  background: url("../images/1510057111013.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 0%;
+  position: relative;
+}
