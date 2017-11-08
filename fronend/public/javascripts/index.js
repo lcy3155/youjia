@@ -10,11 +10,11 @@ window.onload=function(){
     var iTim=document.querySelectorAll('.item img');
     var iTob=document.querySelector('.carousel-inner');
     var xsb=document.querySelector('.xsb');
-    var cx=document.querySelector('.cx');
+
     iTob.style.height=document.documentElement.clientHeight+'px';
     iTox.style.height=document.documentElement.clientHeight+'px';
     xsb.style.height=document.documentElement.clientHeight+'px';
-    cx.style.height=document.documentElement.clientHeight+'px';
+
 
     for(var i=0;i<iTem.length;i++){
         iTem[i].style.height=document.documentElement.clientHeight+'px';
@@ -49,9 +49,22 @@ window.onload=function(){
         })
 
 
+        //选项卡
+        $('.zhs-da li').click(function(){
+            var _this=$(this).index()
+            $('.zhs-da li ').removeClass('yan').eq($(this).index()).addClass('yan') ;
+            $('.zhs-da dl dd').animate({
+                'left':'50px',
+                'opacity':'0'
+            },300,function(){
+                $('.zhs-da dl dd').hide().eq(_this).animate({
+                    'left':'30px',
+                    'opacity':'1'
+                },300).show()
+            })
 
+        })
     })
-
 
     //----------------
     function  F5() {

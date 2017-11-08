@@ -5,6 +5,9 @@ body {
 a {
   color: #00B7FF;
 }
+/* 清除浮动 */
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
 * {
   margin: 0;
   padding: 0;
@@ -148,18 +151,25 @@ nav ul li a:hover{
   top: 50%;
   margin-top: -110px;
   background: #333333;
+  z-index: 99999999999999999;
 }
 .ding a{
   width: 54px;
   height: 55px;
+  display: block;
   font-size: 30px;
   line-height: 54px;
   text-align: center;
   color: #fff;
 }
-.ding .avtie{
+.ding .active{
   background: #ff5100;
 }
+.ding a:hover{
+  background: #ff5100;
+  color: #fff;
+}
+
 
 
 /*产品介绍*/
@@ -373,10 +383,192 @@ nav ul li a:hover{
 /*产品销售*/
 .cx{
   width: 100%;
+  height: 750px;
   background: url("../images/1510057111013.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 0 0%;
   position: relative;
+}
+.xb{
+  width: 100%;
+  height: 750px;
+
+}
+.xb h1{
+  margin-top: 15%;
+}
+.pj{
+  width: 1200px;
+  margin: 50px auto 0;
+}
+.pj-da{
+  float: left;
+  width: 150px;
+  margin: 0 65px;
+  text-align: center;
+}
+.pj_1{
+  width: 150px;
+  height: 150px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  line-height: 138px;
+  box-sizing: border-box;
+  font-size: 23px;
+  color: #fff;
+  text-align: center;
+}
+.pj-da p{
+  font-size: 18px;
+  line-height: 60px;
+  margin-top: 10px;
+}
+.pj-da span{
+  font-size:26px;
+  line-height: 30px;
+}
+
+
+/*<!--项目展示-->*/
+.zhs{
+  width: 100%;
+  height: 890px;
+  background: #ffffff;
+  color: #101010;
+  overflow: hidden;
+}
+.zhs h1{
+    margin-top: 150px;
+  font-size: 37px;
+  text-align: center;
+  line-height: 90px;
+}
+.zhs p{
+  text-align: center;
+}
+
+.bi2 span:nth-child(1),.bi2 span:nth-child(3){
+  background: #111;
+}
+.zhs-da{
+  width: 1240px;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.zhs-da ul{
+    width: 310px;
+  height: 60px;
+  margin: 0 auto;
+}
+.zhs-da ul li{
+  float: left;
+  border-right:1px solid #111 ;
+ color: #444444;
+  padding: 0 10px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.zhs-da ul .yan{
+  color: #111111;
+  font-weight: bold;
+}
+.zhs-da dl .checked{
+  display: block;
+}
+
+.zhs-da dl{
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+.zhs-da dl dd{
+  width: 100%;
+  height: 390px;
+  display: none;
+}
+.zhs-da dl dd a{
+  float: left;
+  width: 300px;
+  height: 180px;
+  margin:0 10px 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+.zhs-da dl dd a img{
+   width: 300px;
+   height: 180px;
+ }
+.zhs-jia{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.7);
+  opacity: 0;
+  transition: .35s;
+}
+
+.zhs-shi{
+  position: absolute;
+  left: 0;
+  top: -180px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .35s;
+}
+.zhs-shi:after{
+  content: "";
+  position: absolute;
+  left:100px;
+  top: 90px;
+  height: 2px;
+  width: 100px;
+  background:#fff;
+}
+.zhs-shi:before{
+  content: "";
+  position: absolute;
+  left:150px;
+  top: 40px;
+  width: 2px;
+  height: 100px;
+  background:#fff;
+}
+.zhs-da dl dd a:hover .zhs-shi{
+  top:0;
+}
+.zhs-da dl dd a:hover .zhs-jia{
+  opacity: 1;
+
+}
+
+/*我们的服务*/
+.fu{
+  float: left;
+  width: 100%;
+  color: #111;
+}
+.fu h1{
+  margin-top: 100px;
+}
+.fu_s{
+  width: 1240px;
+  margin: 120px auto 0;
+
+}
+.fu_s_yi{
+  float: left;
+  width: 250px;
+  margin: 0 30px;
+  text-align: center;
+}
+.fu_s_yi p{
+    text-align: left;
 }
