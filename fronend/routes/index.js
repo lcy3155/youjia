@@ -35,7 +35,6 @@ router.post('/select4', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='x'`,function (err, rows, fields) {
         if(err) throw err;
-        console.log(rows)
         res.send(rows)
     })
 });
@@ -44,7 +43,6 @@ router.post('/select5', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='f'`,function (err, rows, fields) {
         if(err) throw err;
-        console.log(rows)
         res.send(rows)
     })
 });
@@ -53,7 +51,6 @@ router.post('/select6', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='p'`,function (err, rows, fields) {
         if(err) throw err;
-        console.log(rows)
         res.send(rows)
     })
 });
