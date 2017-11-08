@@ -11,8 +11,16 @@ router.post('/select1', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='l'`,function (err, rows, fields) {
         if(err) throw err;
-      console.log(rows)
       res.send(rows)
+    })
+});
+//模板功能接口
+router.post('/select2', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='m'`,function (err, rows, fields) {
+        if(err) throw err;
+        console.log(rows)
+        res.send(rows)
     })
 });
 //添加接口
@@ -63,9 +71,14 @@ router.post('/delete', function(req, res, next) {
     var id=req.body.ID
     var path=req.body.path
     connection.query(`DELETE FROM list WHERE id=${id}`,function (err, rows, fields) {
-        fs.unlink(`${path}`,function () {
-            res.send('删除成功')
-        })
+       if(path){
+           fs.unlink(`${path}`,function () {
+               res.send('删除成功')
+           })
+       }else{
+           res.send('删除成功')
+       }
+
     })
 });
 module.exports = router;

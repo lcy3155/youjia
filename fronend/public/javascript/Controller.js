@@ -21,9 +21,32 @@ $(function () {
         })
     }
     F5()
+    function F6() {
+        $.ajax({
+            url:'http://localhost:3000/select2',
+            type:'POST',
+            success:function (data) {
+                console.log(data)
+                $('#t2').html('')
+                for(i in data){
+                    $('#t2').append(
+                        '<tr>' +
+                        '<td>'+data[i].id+'</td>' +
+                        '<td>'+data[i].title+'</td>' +
+                        '<td>'+data[i].detail+'</td>' +
+                        '<td><button id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '</tr>'
+                    )
+                }
+            }
+        })
+    }
     //点击切换刷新
     $('#a1').click(function () {
         F5()
+    })
+    $('#a2').click(function () {
+        F6()
     })
     // 图片上传框
     var Files=null
@@ -93,6 +116,19 @@ $(function () {
             },
             success:function (data) {
                 window.location.reload()
+            }
+        })
+    })
+    $('#profile').on('click','button',function () {
+        var ID=$(this).attr('id')
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+            },
+            success:function (data) {
+                F6()
             }
         })
     })
