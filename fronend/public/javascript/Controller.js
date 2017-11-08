@@ -185,6 +185,9 @@ $(function () {
         if($('#team').val()!==''){
             Teamtext=$('#team').val()
         }
+        if(Type==null){
+            alert('请选择提交类型')
+        }
         var files
         if(Type!=='x'){
             if(Title!==""&&Content!=='<p><br></p>'&&Type!==null){
@@ -230,6 +233,9 @@ $(function () {
         if($('#team').val()!==''){
             Teamtext=$('#team').val()
         }
+        if(Id==''){
+            alert('更改时ID不能为空')
+        }
         var files
         if(Title!==""&&Content!=='<p><br></p>'&&Id!==''){
             $.ajax({
@@ -244,12 +250,13 @@ $(function () {
                     team:Teamtext
                 },
                 success:function (data) {
-                    console.log('更新成功')                    // window.location.reload()
+                    window.location.reload()
                 }
             })
         }
     })
     //删除数据
+    //轮播图删除
     $('#home').on('click','button',function () {
         var ID=$(this).attr('id')
         var Path=$(this).attr('s')
@@ -266,6 +273,7 @@ $(function () {
             }
         })
     })
+    //模板功能删除
     $('#profile').on('click','button',function () {
         var ID=$(this).attr('id')
         $.ajax({
@@ -279,6 +287,7 @@ $(function () {
             }
         })
     })
+    //团队接口
     $('#messages').on('click','button',function () {
         var ID=$(this).attr('id')
         var Path=$(this).attr('s')
@@ -292,6 +301,54 @@ $(function () {
             },
             success:function (data) {
                 F7()
+            }
+        })
+    })
+    //项目展示删除
+    $('#settings').on('click','button',function () {
+        var ID=$(this).attr('id')
+        var Path=$(this).attr('s')
+        console.log(Path)
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+                path:Path
+            },
+            success:function (data) {
+                F8()
+            }
+        })
+    })
+    //服务删除
+    $('#service').on('click','button',function () {
+        var ID=$(this).attr('id')
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+            },
+            success:function (data) {
+                F9()
+            }
+        })
+    })
+    //评价删除
+    $('#pingjia').on('click','button',function () {
+        var ID=$(this).attr('id')
+        var Path=$(this).attr('s')
+        console.log(Path)
+        $.ajax({
+            url:'http://localhost:3000/delete',
+            type:'POST',
+            data:{
+                ID:ID,
+                path:Path
+            },
+            success:function (data) {
+                F10()
             }
         })
     })

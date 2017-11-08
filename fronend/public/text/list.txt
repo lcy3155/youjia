@@ -7,6 +7,5 @@
 "28"	"免费试用"	"<p><span style=""color: rgb(142, 142, 142); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;"">起飞页不仅是一个方便快捷的构建网站</span><br></p>"	""	""	"m"	""
 "29"	"支持WIN10"	"<p><span style=""color: rgb(142, 142, 142); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;"">起飞页不仅是一个方便快捷的构建网站</span><br></p>"	""	""	"m"	""
 "30"	"一键部署"	"<p><span style=""color: rgb(142, 142, 142); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;"">起飞页不仅是一个方便快捷的构建网站</span><br></p>"	""	""	"m"	""
-"31"	""	"<p><br></p>"	"http://localhost:3000/images/1510112896165.jpg"	"public/images/1510112896165.jpg"	"x"	""
-"32"	"服务2"	"<p>84987987</p>"	""	""	"f"	""
-"33"	"评价2"	"<p>7678587</p>"	"http://localhost:3000/images/1510124867867.jpg"	"public/images/1510124867867.jpg"	"p"	""
+"37"	"服务"	"<p><span style=""color: rgb(255, 156, 0);"">橙色</span></p>"	""	""	"f"	""
+"38"	"评价"	"<span style=""color: rgb(0, 255, 0);"">绿色</span>"	"http://localhost:3000/images/1510128022911.jpg"	"public/images/1510128022911.jpg"	"p"	""
