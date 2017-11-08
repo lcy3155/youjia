@@ -5,10 +5,16 @@
 //    $('.item').height($(window).height())
 //})
 window.onload=function(){
-    //var iTem=document.querySelectorAll('.item')
-    //for(var i=0;i<iTem.length;i++){
-    //    iTem[i].style.height=document.documentElement.clientHeight+'px';
-    //}
+    var iTem=document.querySelectorAll('.item');
+    var iTox=document.querySelector('.carousel');
+    var iTim=document.querySelectorAll('.item img');
+    var iTob=document.querySelector('.carousel-inner');
+    iTob.style.height=document.documentElement.clientHeight+'px';
+    iTox.style.height=document.documentElement.clientHeight+'px';
+    for(var i=0;i<iTem.length;i++){
+        iTem[i].style.height=document.documentElement.clientHeight+'px';
+        iTim[i].style.height=document.documentElement.clientHeight+'px';
+    }
     function  F5() {
         $.ajax({
             url:'http://localhost:3000/select1',
