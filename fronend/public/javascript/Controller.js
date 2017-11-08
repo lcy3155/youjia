@@ -352,4 +352,18 @@ $(function () {
             }
         })
     })
+
+    //自动获取
+    $('#id').change(function () {
+        var ID=$(this).val()
+        console.log(ID)
+        $.ajax({
+            url:'http://localhost:3000/select',
+            type:'POST',
+            data:ID,
+            success:function (data) {
+                console.log(data)
+            }
+        })
+    })
 })
