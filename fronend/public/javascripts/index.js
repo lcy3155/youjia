@@ -23,6 +23,7 @@ window.onload=function(){
                     '<div class="xia glyphicon glyphicon-menu-down"></div>' +
                     '</div>' +
                     '</div>')
+                $('#dian').append('<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>')
                 for(i=1;i<data.length;i++){
                     $('#lunbo').append('<div class="item">' +
                         '<img src="'+data[i].img+'">' +
@@ -34,8 +35,8 @@ window.onload=function(){
                         '</div>'
                     )
                 }
-                for(i=0;i<data.length;i++){
-                    $('#dian').append('<li data-target="#carousel-example-generic" ></li>')
+                for(i=1;i<data.length;i++){
+                    $('#dian').append('<li data-target="#carousel-example-generic" data-slide-to="'+i+'"></li>')
                 }
             }
         })

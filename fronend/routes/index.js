@@ -3,13 +3,7 @@ var router = express.Router();
 var mysql=require('mysql')
 var fs=require('fs')
 var formidable=require('formidable')
-var connection=mysql.createPool({
-    host:"localhost",
-    user:'root',
-    password:'123456',
-    database:'test',
-    port:3306
-})
+var connection=require('./../root.js')
 
 /* GET home page. */
 //轮播图接口
