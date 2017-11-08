@@ -5,10 +5,10 @@
 //    $('.item').height($(window).height())
 //})
 window.onload=function(){
-    var iTem=document.querySelectorAll('.item')
-    for(var i=0;i<iTem.length;i++){
-        iTem[i].style.height=document.documentElement.clientHeight+'px';
-    }
+    //var iTem=document.querySelectorAll('.item')
+    //for(var i=0;i<iTem.length;i++){
+    //    iTem[i].style.height=document.documentElement.clientHeight+'px';
+    //}
     function  F5() {
         $.ajax({
             url:'http://localhost:3000/select1',
@@ -20,7 +20,7 @@ window.onload=function(){
                     '<div class="carousel-caption">' +
                     '<h1>'+data[0].title+'</h1>' +
                     '<h3>'+data[0].detail+'</h3>' +
-                    '<div class="xia"></div>' +
+                    '<div class="xia glyphicon glyphicon-menu-down"></div>' +
                     '</div>' +
                     '</div>')
                 $('#dian').append('<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>')
@@ -30,7 +30,7 @@ window.onload=function(){
                         '<div class="carousel-caption">' +
                         '<h1>'+data[i].title+'</h1>' +
                         '<h3>'+data[i].detail+'</h3>' +
-                        '<div class="xia"></div>' +
+                        '<div class="xia glyphicon glyphicon-menu-down"></div>' +
                         '</div>' +
                         '</div>'
                     )
