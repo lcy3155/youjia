@@ -102,9 +102,14 @@ window.onload=function(){
     $.ajax({
         url:'http://localhost:3000/select3',
         type:'POST',
-        data:{},
         success:function (data) {
-
+            for(i in data){
+                $('.td_tu').eq(i).append('' +
+                    '<img src="'+data[i].img+'" alt="">' +
+                    '<h4>'+data[i].title+'</h4>' +
+                    '<h5>'+data[i].teamtext+'</h5>' +
+                    '<p>'+data[i].detail+'</p>')
+            }
         }
     })
 
