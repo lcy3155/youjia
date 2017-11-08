@@ -27,6 +27,32 @@ router.post('/select3', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*")
     connection.query(`SELECT * FROM list WHERE type='t'`,function (err, rows, fields) {
         if(err) throw err;
+        res.send(rows)
+    })
+});
+//项目展示接口
+router.post('/select4', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='x'`,function (err, rows, fields) {
+        if(err) throw err;
+        console.log(rows)
+        res.send(rows)
+    })
+});
+//服务接口
+router.post('/select5', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='f'`,function (err, rows, fields) {
+        if(err) throw err;
+        console.log(rows)
+        res.send(rows)
+    })
+});
+//评价接口
+router.post('/select6', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*")
+    connection.query(`SELECT * FROM list WHERE type='p'`,function (err, rows, fields) {
+        if(err) throw err;
         console.log(rows)
         res.send(rows)
     })
@@ -40,7 +66,6 @@ router.post('/add', function(req, res, next) {
     var Ty=req.body.ty
     var I2=req.body.i2
     var Team=req.body.team
-    console.log(T,C,I)
     connection.query(`INSERT INTO list (title,detail,img,type,img2,teamtext) VALUES('${T}','${C}','${I}','${Ty}','${I2}','${Team}')`,function (err, rows, fields) {
         res.send('上传成功')
     })
@@ -88,6 +113,19 @@ router.post('/delete', function(req, res, next) {
            res.send('删除成功')
        }
 
+    })
+});
+//更新接口
+router.post('/update', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin','*')
+    var Id=req.body.id
+    var T=req.body.t
+    var C=req.body.c
+    var I=req.body.i
+    var I2=req.body.i2
+    var Team=req.body.team
+    connection.query(`UPDATE list SET title='${T}',detail='${C}',img='${I}',img2='${I2}',teamtext='${Team}' WHERE id=${Id}`,function (err, rows, fields) {
+        res.send('更改成功')
     })
 });
 module.exports = router;
