@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ced0132-4d79-4d1b-81a8-caf38fa37db3" name="默认的" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fronend/npm-debug.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fronend/public/javascripts/index.js" afterPath="$PROJECT_DIR$/fronend/public/javascripts/index.js" />
     </list>
@@ -23,14 +24,14 @@
     <favorites_list name="有家软件公司" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.592006">
+    <splitter split-orientation="horizontal" split-proportion="0.60482657">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/qian/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21804512">
-                  <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
+                <state vertical-scroll-proportion="-0.2387218">
+                  <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
                   <folding>
                     <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -43,8 +44,7 @@
                     <element signature="n#div#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -54,12 +54,12 @@
             <entry file="file://$PROJECT_DIR$/fronend/routes/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-10.464286">
-                  <caret line="31" column="37" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+                  <caret line="32" column="37" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
                   <folding>
-                    <marker date="1510129443025" expanded="true" signature="1324:1500" placeholder="{...}" />
-                    <marker date="1510129443025" expanded="true" signature="1463:1500" placeholder="{...}" />
-                    <marker date="1510129443025" expanded="true" signature="2007:2036" placeholder="{...}" />
-                    <marker date="1510129443025" expanded="true" signature="2007:2039" placeholder="{...}" />
+                    <marker date="1510130469241" expanded="true" signature="1346:1522" placeholder="{...}" />
+                    <marker date="1510130469241" expanded="true" signature="1485:1522" placeholder="{...}" />
+                    <marker date="1510130469241" expanded="true" signature="2029:2058" placeholder="{...}" />
+                    <marker date="1510130469241" expanded="true" signature="2029:2061" placeholder="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -69,21 +69,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/fronend/public/stylesheets/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.13492064">
+                <state vertical-scroll-proportion="-0.61290324">
                   <caret line="373" column="23" selection-start-line="373" selection-start-column="4" selection-end-line="373" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fronend/public/javascripts/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="3.2857144">
-                  <caret line="112" column="77" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.60966545">
+                  <caret line="106" column="11" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#40#0" expanded="false" />
                     <element signature="e#893#1398#0" expanded="false" />
@@ -338,7 +338,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -393,8 +393,7 @@
             <element signature="n#div#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -434,8 +433,7 @@
             <element signature="n#div#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,10 +454,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1510129443025" expanded="true" signature="1324:1500" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="1463:1500" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="2007:2036" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="2007:2039" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="1346:1522" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="1485:1522" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="2029:2058" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="2029:2061" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -480,8 +478,7 @@
             <element signature="n#div#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -624,12 +621,12 @@
     <entry file="file://$PROJECT_DIR$/fronend/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.464286">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding>
-            <marker date="1510129443025" expanded="true" signature="1324:1500" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="1463:1500" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="2007:2036" placeholder="{...}" />
-            <marker date="1510129443025" expanded="true" signature="2007:2039" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="1346:1522" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="1485:1522" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="2029:2058" placeholder="{...}" />
+            <marker date="1510130469241" expanded="true" signature="2029:2061" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -650,10 +647,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fronend/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.61290324">
+          <caret line="373" column="23" selection-start-line="373" selection-start-column="4" selection-end-line="373" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/qian/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21804512">
-          <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.2387218">
+          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -666,28 +671,19 @@
             <element signature="n#div#4;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fronend/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2857144">
-          <caret line="112" column="77" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.60966545">
+          <caret line="106" column="11" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <element signature="e#893#1398#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fronend/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13492064">
-          <caret line="373" column="23" selection-start-line="373" selection-start-column="4" selection-end-line="373" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>

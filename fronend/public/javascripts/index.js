@@ -104,9 +104,7 @@ window.onload=function(){
         type:'POST',
         data:{},
         success:function (data) {
-            for(i in data){
-                //$('.td_tu')[i].append('<img src="'+data[i].img+'">'+'<h4>'+data[i].name+'</h4><h5>'+data[i].teamtext+'</h5><p>'+e[i].	detail+'</p>')
-            }
+
         }
     })
 
