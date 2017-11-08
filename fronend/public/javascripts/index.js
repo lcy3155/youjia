@@ -14,6 +14,7 @@ window.onload=function(){
             url:'http://localhost:3000/select1',
             type:'POST',
             success:function (data) {
+                console.log(data)
                 $('#lunbo').append('<div class="item active">\n' +
                     '<img src="'+data[0].img+'" alt="...">\n' +
                     '<div class="carousel-caption">' +
