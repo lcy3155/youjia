@@ -20,7 +20,7 @@ window.onload=function(){
                     '<div class="carousel-caption">' +
                     '<h1>'+data[0].title+'</h1>' +
                     '<h3>'+data[0].detail+'</h3>' +
-                    '<div class="xia"></div>' +
+                    '<div class="xia glyphicon glyphicon-menu-down"></div>' +
                     '</div>' +
                     '</div>')
                 for(i=1;i<data.length;i++){
@@ -29,7 +29,7 @@ window.onload=function(){
                         '<div class="carousel-caption">' +
                         '<h1>'+data[i].title+'</h1>' +
                         '<h3>'+data[i].detail+'</h3>' +
-                        '<div class="xia"></div>' +
+                        '<div class="xia glyphicon glyphicon-menu-down"></div>' +
                         '</div>' +
                         '</div>'
                     )
