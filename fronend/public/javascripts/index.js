@@ -164,7 +164,6 @@ window.onload=function(){
                 $('.fu_s_yi').eq(i).append('' +
                     '<h3>'+data[i].title+'</h3>' +
                     '<p>'+data[i].detail+'</p>'
-
                 )
             }
         }

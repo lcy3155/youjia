@@ -116,10 +116,9 @@ $(function () {
                     $('#t6').append(
                         '<tr>' +
                         '<td>'+data[i].id+'</td>' +
-                        '<td><img src="'+data[i].img+'" alt="" class="simg"></td>' +
                         '<td>'+data[i].title+'</td>' +
                         '<td>'+data[i].detail+'</td>' +
-                        '<td><button s="'+data[i].img2+'" id="'+data[i].id+'" class="delete">删除</button></td>' +
+                        '<td><button id="'+data[i].id+'" class="delete">删除</button></td>' +
                         '</tr>'
                     )
                 }
