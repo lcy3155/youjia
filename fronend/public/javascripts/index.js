@@ -169,7 +169,22 @@ window.onload=function(){
         }
     })
 
+    //新闻
+    $.ajax({
+        url:'http://localhost:3000/select6',
+        type:'POST',
+        success:function (data) {
+            for(i in data){
+                $('.xinwe').append('' +
+                    '<a id="'+data[i].id+'">'+
+                    '<span>'+data[i].title+'</span>' +
+                    '<span>'+data[i].detail+'</span>'  +
 
+                    '</a>'
+                )
+            }
+        }
+    })
 
 
 
