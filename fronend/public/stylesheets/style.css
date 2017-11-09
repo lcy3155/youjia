@@ -165,10 +165,46 @@ nav ul li a:hover{
 .ding .active{
   background: #ff5100;
 }
+
+.ding-er{
+  width: 170px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: -200px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #111;
+  background: url("../images/er.png") center 10px no-repeat;
+  background-size: 150px 150px;
+  display: none;
+}
+.ding-er:before{
+  content: "微信扫一扫，关注我们";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  height: 20px;
+  width: 100%;
+ text-align: center;
+  z-index: 1222222;
+  color: #fff;
+}
+.ding-er:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+}
 .ding a:hover{
   background: #ff5100;
   color: #fff;
 }
+
 
 
 
@@ -178,6 +214,12 @@ nav ul li a:hover{
   background: #f1f1f1;
   text-align: center;
   padding-top: 110px;
+}
+#cjs{
+  background: #F1F1F1;
+}
+#gn{
+  background: #fff;
 }
 .cjs h1{
   line-height: 74px;
@@ -567,5 +609,6 @@ nav ul li a:hover{
   text-align: center;
 }
 .fu_s_yi p{
+  width: 100%;
     text-align: left;
 }

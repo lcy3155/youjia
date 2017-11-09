@@ -69,6 +69,17 @@ window.onload=function(){
             })
 
         })
+        //二维码
+        $('.active').mouseover(function(){
+            $('.ding-er').slideDown()
+        })
+        $('.active').mouseleave(function(){
+            $('.ding-er').slideUp()
+        })
+
+
+
+
     })
 
     //----------------
@@ -158,6 +169,8 @@ window.onload=function(){
             }
         }
     })
+
+
 
 
 
