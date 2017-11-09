@@ -73,7 +73,7 @@ router.post('/add', function(req, res, next) {
     var Ty=req.body.ty
     var I2=req.body.i2
     var Team=req.body.team
-    connection.query(`INSERT INTO list (title,detail,img,type,img2,teamtext) VALUES('${T}','${C}','${I}','${Ty}','${I2}','${Team}')`,function (err, rows, fields) {
+    connection.query(`INSERT INTO list (title,detail,img,type,img2,teamtext,time) VALUES('${T}','${C}','${I}','${Ty}','${I2}','${Team}',now())`,function (err, rows, fields) {
         if(err) throw err;
         console.log('成功')
         res.send('上传成功')
