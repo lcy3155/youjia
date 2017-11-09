@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : news
+Source Server         : test
 Source Server Version : 50556
 Source Host           : localhost:3306
 Source Database       : test
@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50556
 File Encoding         : 65001
 
-Date: 2017-11-09 13:35:47
+Date: 2017-11-09 16:18:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for list
+-- Table structure for `list`
 -- ----------------------------
 DROP TABLE IF EXISTS `list`;
 CREATE TABLE `list` (
@@ -29,7 +29,7 @@ CREATE TABLE `list` (
   `teamtext` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of list
@@ -76,3 +76,7 @@ INSERT INTO `list` VALUES ('82', '服 务 介 绍', '<p><span style=\"color: rgb
 INSERT INTO `list` VALUES ('83', '服 务 介 绍', '<p><span style=\"color: rgb(102, 102, 102); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;\">応损捠捡换攳，攴朰朲朳枛朸桸桹桺奿妀。夲夳夵壱売壳圢圤圥圦圧！圩圪囡団囤囥咍咎，咐咑厺厼厽桻桼忝忞帄帇帉帊峢</span><br></p>', '', '', 'f', '', '0000-00-00 00:00:00');
 INSERT INTO `list` VALUES ('84', '服 务 介 绍', '<p><span style=\"color: rgb(102, 102, 102); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;\">応损捠捡换攳，攴朰朲朳枛朸桸桹桺奿妀。夲夳夵壱売壳圢圤圥圦圧！圩圪囡団囤囥咍咎，咐咑厺厼厽桻桼忝忞帄帇帉帊峢</span><br></p>', '', '', 'f', '', '0000-00-00 00:00:00');
 INSERT INTO `list` VALUES ('85', '服 务 介 绍', '<p><span style=\"color: rgb(102, 102, 102); font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;\">応损捠捡换攳，攴朰朲朳枛朸桸桹桺奿妀。夲夳夵壱売壳圢圤圥圦圧！圩圪囡団囤囥咍咎，咐咑厺厼厽桻桼忝忞帄帇帉帊峢</span><br></p>', '', '', 'f', '', '0000-00-00 00:00:00');
+INSERT INTO `list` VALUES ('90', 'H5', '<p>h5新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势</p>', '', '', 'p', '', '2017-11-09 13:42:16');
+INSERT INTO `list` VALUES ('91', 'css', '<p>css新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势</p>', '', '', 'p', '', '2017-11-09 13:42:36');
+INSERT INTO `list` VALUES ('92', 'JS', '<p>JS新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势</p>', '', '', 'p', '', '2017-11-09 13:43:03');
+INSERT INTO `list` VALUES ('93', 'node', '<p>node新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势新闻、行情、趋势</p>', '', '', 'p', '', '2017-11-09 13:43:20');
