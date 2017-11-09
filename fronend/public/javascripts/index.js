@@ -10,11 +10,11 @@ window.onload=function(){
     var iTim=document.querySelectorAll('.item img');
     var iTob=document.querySelector('.carousel-inner');
     var xsb=document.querySelector('.xsb');
-
+    var xb=document.querySelector('.xb');
     iTob.style.height=document.documentElement.clientHeight+'px';
     iTox.style.height=document.documentElement.clientHeight+'px';
     xsb.style.height=document.documentElement.clientHeight+'px';
-
+    xb.style.height=document.documentElement.clientHeight+'px';
 
     for(var i=0;i<iTem.length;i++){
         iTem[i].style.height=document.documentElement.clientHeight+'px';
@@ -125,6 +125,46 @@ window.onload=function(){
             }
         }
     })
+
+
+    //项目展示
+    $.ajax({
+        url:'http://localhost:3000/select4',
+        type:'POST',
+        success:function (data) {
+            for(i in data){
+                $('.zhs-da dl dd a').eq(i).append('' +
+                    '<img src="'+data[i].img+'" alt="">')
+            }
+        }
+    })
+
+    //我们的服务
+    $.ajax({
+        url:'http://localhost:3000/select5',
+        type:'POST',
+        success:function (data) {
+            for(i in data){
+                $('.fu_s_yi').eq(i).append('' +
+                    '<h3>'+data[i].title+'</h3>' +
+                    '<p>'+data[i].detail+'</p>'
+
+                )
+            }
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
