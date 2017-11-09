@@ -11,10 +11,15 @@ window.onload=function(){
     var iTob=document.querySelector('.carousel-inner');
     var xsb=document.querySelector('.xsb');
     var xb=document.querySelector('.xb');
+    var cx=document.querySelector('.cx');
+    var cxb=document.querySelector('.cxb');
+
     iTob.style.height=document.documentElement.clientHeight+'px';
     iTox.style.height=document.documentElement.clientHeight+'px';
     xsb.style.height=document.documentElement.clientHeight+'px';
     xb.style.height=document.documentElement.clientHeight+'px';
+    cx.style.height=document.documentElement.clientHeight+'px';
+    cxb.style.height=document.documentElement.clientHeight+'px';
 
     for(var i=0;i<iTem.length;i++){
         iTem[i].style.height=document.documentElement.clientHeight+'px';
