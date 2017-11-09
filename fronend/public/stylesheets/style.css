@@ -21,9 +21,8 @@ a {
 /*头部*/
 header{
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  background: rgba(77, 77, 77, 0.51);
   z-index: 9999999999999999999999999999;
 }
 .header-box{
@@ -48,6 +47,22 @@ nav{
   height: 100%;
   float: right;
 }
+nav ul li a{
+  float: left;
+  line-height: 74px;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 12px;
+}
+nav ul li .iNew{
+  color: #ff5100;
+}
+
+nav{
+   width: 500px;
+   height: 100%;
+   float: right;
+ }
 nav ul{
 
 }
@@ -64,6 +79,50 @@ nav ul li .iNew{
 nav ul li a:hover{
   color: #ff5100;
 }
+.header1{
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  height: 50px;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  background: rgba(77, 77, 77, 0.51);
+  z-index: 9999999999999999;
+  display: none;
+  transition: .35s;
+}
+.header1-logo{
+  float: left;
+  width: 130px;
+  height: 100%;
+}
+.header1-logo>a>img{
+  display: block;
+  width: 66px;
+  height: 32px;
+  margin-top: 7px;
+}
+
+.nav1{
+   width: 500px;
+   height: 100%;
+   float: right;
+ }
+
+.nav1 ul li a{
+  float: left;
+  line-height: 50px;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 12px;
+}
+.nav1 ul li .iNew{
+  color: #ff5100;
+}
+
+
+
 
 
 /*banner*/
@@ -255,7 +314,6 @@ nav ul li a:hover{
 .gn{
   width: 100%;
   height: 500px;
-  background: #f1f1f1;
   margin-top: 20px;
 }
 .gn-liu{
@@ -300,7 +358,7 @@ nav ul li a:hover{
 
 .xsb{
   width: 100%;
-  background: url("../images/1510057111013.jpg ");
+  background: url("../images/bj1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -359,8 +417,8 @@ nav ul li a:hover{
 }
 .td{
   width: 1170px;
-  margin: 30px auto 100px;
-  height: 450px;
+  margin: 30px auto 0;
+  height: 550px;
   position: relative;
   overflow: hidden;
 }
@@ -397,7 +455,7 @@ nav ul li a:hover{
   background: #ff5100;
   color: #fff;
   display: block;
-  top: 50%;
+  top: 40%;
   text-align: center;
   font-size: 20px;
   line-height: 32px;
@@ -425,7 +483,7 @@ nav ul li a:hover{
 /*产品销售*/
 .cx{
   width: 100%;
-  background: url("../images/1510057111013.jpg");
+  background: url("../images/bj2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -434,18 +492,27 @@ nav ul li a:hover{
 }
 .cxb{
   width: 100%;
+  position: absolute;
+  background: rgba(36, 35, 33, 0.51);
+  color: #fff;
+  z-index: 99999;
+  text-align: center;
 }
 .cxb h1{
-  margin-top: 15%;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 2%;
 }
 .pj{
   width: 1200px;
-  margin: 50px auto 0;
+  margin: 5% auto 0;
 }
 .pj-da{
   float: left;
   width: 150px;
-  margin: 0 65px;
+  margin: 0 75px;
   text-align: center;
 }
 .pj_1{
@@ -618,6 +685,11 @@ nav ul li a:hover{
   background: #f0efe6;
 }
 
+.xinwe{
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
 
 .xinwe a{
   display: block;
@@ -625,11 +697,17 @@ nav ul li a:hover{
   height: 50px;
   color: #111;
 }
+.xinwe a:hover{
+  font-weight: bold;
+  color: #b65a29;
+}
 .xinwe a span{
   float: left;
+  display: block;
   height: 100%;
   line-height: 50px;
   font-size: 20px;
+  cursor: pointer;
 }
 .xinwe a span:nth-child(1){
      width: 200px;
@@ -640,7 +718,10 @@ nav ul li a:hover{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/*.xinwe a span:nth-child(3){*/
-  /*float: right;*/
-  /*width: 100px;*/
-/*}*/
+.xinwe a span:nth-child(3){
+  float: right;
+  width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

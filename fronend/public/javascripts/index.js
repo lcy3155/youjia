@@ -26,6 +26,25 @@ window.onload=function(){
         iTim[i].style.height=document.documentElement.clientHeight+'px';
     }
 
+    //吸顶条
+    var hea = document.querySelector('header');
+    var hea1 = document.querySelector('.header1');
+    var bar = 200;
+    window.onscroll = function () {
+        var st = document.documentElement.scrollTop || document.body.scrollTop;  //ie浏览器      其他浏览器
+        if (st >= bar) {
+            hea1.style.cssText = 'display:block;position: fixed;top:0;left:0;';
+            hea.style.display = 'none';
+        }
+        else if(st<bar){
+            hea.style.display = 'block';
+           hea1.style.cssText = 'display:none;position: fixed;top:300px;left:0';
+
+
+        }
+    }
+
+    //jq
     $(function(){
 
         var  n=0;
@@ -176,10 +195,10 @@ window.onload=function(){
         success:function (data) {
             for(i in data){
                 $('.xinwe').append('' +
-                    '<a id="'+data[i].id+'">'+
+                    '<a href="new.html?id='+data[i].id+'">'+
                     '<span>'+data[i].title+'</span>' +
                     '<span>'+data[i].detail+'</span>'  +
-
+                    '<span>'+data[i].time+'</span>'  +
                     '</a>'
                 )
             }

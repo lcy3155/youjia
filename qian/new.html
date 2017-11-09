@@ -11,6 +11,30 @@
 <div class="xin_box">
 
 </div>
+<script>
+    window.onload=function(){
+        var id=window.location.href.split('?')[1].split('=')[1];
+        console.log(id)
+        $(function(){
+
+            $.ajax({
+                url:"http://localhost:3000/select6",
+                type:"POST",
+                success:function(e){
+                        $('.xin_box').append('<h1>'+ e[0].title+'</h1><p>'+e[0].detail+'</p>')
+
+                }
+            })
+
+        })
+    }
+
+
+
+
+
+
+</script>
 
 
 </body>
