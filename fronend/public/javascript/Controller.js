@@ -357,21 +357,25 @@ $(function () {
     //自动获取
     $('#id').change(function () {
         var ID=$(this).val()
-        $.ajax({
-            url:'http://localhost:3000/select',
-            type:'POST',
-            data:{
-                ID:ID
-            },
-            success:function (data) {
-                if(data='[]'){
-                    alert('输入id错误，没有此条数据，请检查')
-                }else{
-                    $('#title').val(data[0].title)
-                    $('#content').summernote('code',data[0].detail)
-                    $('#img').attr('src',data[0].img)
+        if($(this).val()!==''){
+            $.ajax({
+                url:'http://localhost:3000/select',
+                type:'POST',
+                data:{
+                    ID:ID
+                },
+                success:function (data) {
+                    if(data==''){
+                        alert('输入id错误，没有此条数据，请检查')
+                    }else{
+                        console.log(data)
+                        $('#title').val(data[0].title)
+                        $('#content').summernote('code',data[0].detail)
+                        $('#img').attr('src',data[0].img)
+                    }
                 }
-            }
-        })
+            })
+        }
+
     })
 })

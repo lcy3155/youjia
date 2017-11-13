@@ -13,6 +13,7 @@ router.post('/select', function(req, res, next) {
     console.log(id)
     connection.query(`SELECT * FROM list WHERE id='${id}'`,function (err, rows, fields) {
         if(err) throw err;
+        console.log(rows)
         res.send(rows)
     })
 });
